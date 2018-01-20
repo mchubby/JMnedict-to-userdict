@@ -1,12 +1,12 @@
-# Japanese-Dictionary-Parser
+# JMnedict-to-userdict
 
-Run 'CreateTables.py' to create a database with the required tables, the output will be 'dictionary.db' 
+Place `JMnedict.xml` in the current working directory, then run `JMnedict-to-userdict.py`. 
 
-Place 'JMdict_e.xml' and 'JMnedict.xml' in the same directory as the Python files, and run 'ParseXmlToSql.py'. This will populate the previously created database.
+Optional arguments are:
 
-Run 'DropTables.py' to delete all tables from the database.
+`-o, --output`    OUTPUT kuromoji-compatible CSV userdict target file. Default: `JMnedict.csv`
 
+`-i, --include`   Comma-separated list of JMnedict entry types to include (DTD entities).
+                  Example: `surname,masc,fem,given`
+                  Default: do not filter out any entry
 
-Notes:
-You can specify the files yourself in 'ParseXmlToSql'. 
-Also works fine with the standard larger JMdict file.
